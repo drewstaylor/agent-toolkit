@@ -26,7 +26,7 @@ ln -s "$PWD/pr-review" ~/.claude/skills/pr-review
 
 Back up any existing `~/.claude/CLAUDE.md` first.
 
-### anony-git (optional)
+## anony-git (optional)
 
 The commit branding in `CLAUDE.md` assumes [anony-git](https://github.com/drewstaylor/anony-git), a `git` wrapper that redacts author names and emails from git output before it reaches AI coding assistants. To build it and wire it into Claude Code, follow its [setup instructions](https://github.com/drewstaylor/anony-git#setup). If you don't use it, remove `using anony-git` from the commit branding line in `CLAUDE.md`.
 

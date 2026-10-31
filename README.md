@@ -26,6 +26,10 @@ ln -s "$PWD/pr-review" ~/.claude/skills/pr-review
 
 Back up any existing `~/.claude/CLAUDE.md` first.
 
+### anony-git (optional)
+
+The commit branding in `CLAUDE.md` assumes [anony-git](https://github.com/drewstaylor/anony-git), a `git` wrapper that redacts author names and emails from git output before it reaches AI coding assistants. To build it and wire it into Claude Code, follow its [setup instructions](https://github.com/drewstaylor/anony-git#setup). If you don't use it, remove `using anony-git` from the commit branding line in `CLAUDE.md`.
+
 ## Task Action Plans (TAP)
 
 A TAP is the human-facing summary of a plan: ordered work items, the files each one touches, and a confidence score for completing it autonomously. Work doesn't start below 90% confidence, and open questions must be resolved first, not deferred. See `CLAUDE.md` for the full rules.

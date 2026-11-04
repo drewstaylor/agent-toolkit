@@ -88,6 +88,8 @@ Always make a new commit. Never propose `git commit --amend`, never offer amendi
 
 Rationale: amending rewrites history in a way that reads confusingly, and when preceding commits are already pushed (the normal case, since work is usually up as a draft PR by then) it forces reviewers into unnecessary rebasing.
 
+This is a preference about who's in control, not a technical limit: amending is perfectly possible (for a pushed commit, it then needs a force push). The user wants to be at the helm for any history rewrite or force push. Never tell the user a commit "can't be amended".
+
 ## Git push policy
 
 Never offer to push commits or create PRs. Pushing is always handled manually by the user. Only push if explicitly asked with specific instructions.

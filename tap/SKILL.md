@@ -53,7 +53,9 @@ human-facing artifact — keep it short, concise, and scannable.
 ### COMMAND MENU
 
 #### 1. /tap go
+
 **Purpose:** Starts delivery and implementation of a task action plan (TAP) if one has been created in the plan file.
+
 **Process:**
 - Confirm a task action plan (TAP) already exists in the plan file.
 - If no TAP exists, or the current TAP was already completed, there's nothing actionable, so prompt / remind the user to first plan the task delivery accordingly before executing the TAP for it. 
@@ -62,7 +64,9 @@ human-facing artifact — keep it short, concise, and scannable.
 - **Next Step Suggestion:**  Proactively suggest the exact `/goal` command as your next prompt suggestion so the user can easily press `Tab` or the `Right Arrow` to populate the input box: "/goal The updated TASK ACTION PLAN (TAP) looks good and you're approved to begin developing. Complete the TAP, halting only if there's a serious design issue that needs an immediate decision that cannot be inferred by looking at the current codebase, our previously discussed plan, or JIRA. Stop when the work is completed, code compiles and all tests (that can be run without CI) are passing"
 
 #### 2. /tap look
+
 **Purpose:** Display the current task action plan (TAP) without having to view it from the plan file. 
+
 **Process:** 
 - Confirm a task action plan (TAP) already exists in the plan file.
 - If no TAP exists, there's nothing actionable, so prompt / remind the user to first plan the task delivery accordingly before executing the TAP for it.

@@ -43,7 +43,7 @@ Before you run it:
 
 ## Pull Request
 
-!`git diff $(git symbolic-ref --short refs/remotes/origin/HEAD)...HEAD`
+!`git diff origin/HEAD...HEAD`
 
 ## Instructions
 

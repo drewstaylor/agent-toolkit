@@ -16,6 +16,30 @@ allowed-tools: Read Grep Git Cd Ls Bash(gh:*) Agent
 | (none) | Runs the skill in standard default mode |
 | `--compiled` | Skip pausing for feedback between steps; collate all findings into a single report at the end |
 | `--docs` | Review a design or documentation PR: replaces steps 2–6 with steps D1–D7 (see Docs mode). Selected automatically when every changed file is Markdown. Combines with `--compiled` |
+| `--help` | Show how to use the skill, then stop without reviewing. Add other flags to explain only those, as in `--help --docs` |
+
+## Help (`--help`)
+
+If `--help` is among the arguments, show help, then stop. Run no review steps, and ignore the Pull Request section below.
+
+- **`--help` alone:** print the Options table above, the usage below, and the prerequisites.
+- **`--help` with other flags**, such as `--help --docs`: explain only those flags. For each one, give its row from the Options table, then what it changes in the review, which steps it adds or replaces, what it needs before you run it, which flags it combines with, and an example command. Take the details from the flag's own section of this file, such as Docs mode for `--docs`.
+- **An unknown flag:** say that it isn't an option, then print the full help.
+
+```text
+/pr-review                    Review step by step, pausing for feedback after each step
+/pr-review --compiled         Run every step without pausing, and give one report at the end
+/pr-review --docs             Review a design or documentation PR (steps D1–D7)
+/pr-review --docs --compiled  Docs mode, with one report at the end
+/pr-review --help             Show this help
+/pr-review --help --docs      Explain only the flags after --help
+```
+
+Before you run it:
+- Check out the PR's branch locally. The skill reviews the diff between `HEAD` and the repo's default branch.
+- The default branch comes from `refs/remotes/origin/HEAD`. If it isn't set, run `git remote set-head origin --auto`.
+- `gh` must be signed in, so the skill can read the PR's review threads.
+- `--docs` is selected automatically when every changed file is Markdown.
 
 ## Pull Request
 
